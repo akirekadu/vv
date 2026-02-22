@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Display</title>
-</head>
+<html>
 <body>
-What we think, 
-  <p/>
-    we become
-    <p/>
+  <pre id="content">Loading...</pre>
+  <script>
+    fetch('https://raw.githubusercontent.com/akirekadu/vv/main/quote.txt')
+      .then(res => res.text())
+      .then(text => document.getElementById('content').textContent = text)
+      .catch(err => document.getElementById('content').textContent = 'Error: ' + err);
+  </script>
 </body>
 </html>
