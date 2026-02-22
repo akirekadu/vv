@@ -3,7 +3,7 @@
 <body>
   <pre id="content">Loading...</pre>
   <script>
-    fetch('https://raw.githubusercontent.com/akirekadu/vv/main/quote.txt')
+    fetch('https://raw.githubusercontent.com/akirekadu/vv/refs/heads/master/quote.txt')
       .then(res => res.text())
       .then(text => document.getElementById('content').textContent = text)
       .catch(err => document.getElementById('content').textContent = 'Error: ' + err);
